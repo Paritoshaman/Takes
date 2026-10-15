@@ -6,16 +6,12 @@
   <meta name="theme-color" content="#121316">
   <title>Takes. — High-Stakes Campus Discourse</title>
   
-  <!-- Typography matching Takes theme -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-  
-  <!-- Master Stylesheet -->
   <link rel="stylesheet" href="style.css">
 
   <script>
-    // Sync dark/light theme before rendering to avoid flash
     try {
       var saved = localStorage.getItem('tk-theme');
       if (saved) document.documentElement.setAttribute('data-theme', saved);
@@ -24,10 +20,9 @@
 </head>
 <body>
 
-  <!-- Top Sticky Navigation -->
   <header class="nv">
     <div class="w">
-      <a class="logo" href="#">
+      <a class="logo" href="index.html">
         <svg viewBox="0 0 100 100" aria-hidden="true">
           <circle cx="50" cy="46" r="42" fill="#C0FE72"/>
           <path d="M13 66L6 95l30-9z" fill="#C0FE72"/>
@@ -40,38 +35,36 @@
       <nav aria-label="Main" class="nl">
         <a href="#how">How it works</a>
         <a href="#campus">Campus</a>
-        <a href="#blog">Blog</a>
+        <a href="blog/index.html">Blog</a>
         <a href="#faq">FAQ</a>
+        <a href="about.html">About</a>
         <a class="bt" href="#join">Join</a>
       </nav>
 
-      <!-- Theme Switcher Button -->
       <button aria-label="Switch theme" class="ic" id="th" type="button">
         <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3v18a9 9 0 0 0 0-18z" fill="currentColor"/></svg>
       </button>
 
-      <!-- Mobile Hamburger Button -->
       <button aria-controls="dr" aria-expanded="false" aria-label="Open menu" class="ic mb" id="mb" type="button">
         <svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
       </button>
     </div>
   </header>
 
-  <!-- Mobile Drawer Overlay -->
   <div class="ov" id="ov"></div>
   <aside aria-label="Menu" class="dr" id="dr">
     <button aria-label="Close menu" class="x" id="mx" type="button">&times;</button>
     <div class="dl">
       <a href="#how">How it works</a>
       <a href="#campus">Campus</a>
-      <a href="#blog">Blog</a>
+      <a href="blog/index.html">Blog</a>
+      <a href="#faq">FAQ</a>
       <a href="about.html">About</a>
       <a href="#join">Join the waitlist</a>
       <a href="privacy.html">Privacy Policy</a>
     </div>
   </aside>
 
-  <!-- Main Hero View -->
   <main>
     <div class="w hero" id="join">
       <div>
@@ -85,7 +78,6 @@
         <div class="ok" id="heroSuccess">Thank you for waiting for Takes.</div>
       </div>
 
-      <!-- Live Mock Feed Cards -->
       <div aria-hidden="true" class="mx">
         <div class="mk">
           <div class="mh">
@@ -119,7 +111,6 @@
       </div>
     </div>
 
-    <!-- Feature Grid: Say It Your Way -->
     <section id="how">
       <div class="w">
         <h2>Say it your way.</h2>
@@ -128,7 +119,7 @@
           <div class="c">
             <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg>
             <h3>Public take</h3>
-            <p>Your verified name and handle. Build your real voice on campus.</p>
+            <p>Your verified handle and voice on campus.</p>
           </div>
           <div class="c f">
             <svg viewBox="0 0 24 24"><path d="M12 3a7 7 0 0 0-7 7v11l2.5-2 2.3 2 2.2-2 2.2 2 2.3-2 2.5 2V10a7 7 0 0 0-7-7z"/><circle cx="9.5" cy="10" r="1" fill="currentColor"/><circle cx="14.5" cy="10" r="1" fill="currentColor"/></svg>
@@ -138,123 +129,147 @@
           <div class="c l">
             <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="3"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 9"/></svg>
             <h3>Up to 3 images</h3>
-            <p>Post rich carousels on public takes. Discourse leads; visuals support.</p>
+            <p>Attach carousel photos to public takes for proof and visual context.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Campus Pillar -->
     <section id="campus">
       <div class="w">
         <h2>Your campus, in real time.</h2>
-        <p class="lead">One high-trust place for unfiltered discussion and local campus updates.</p>
+        <p class="lead">One place for honest opinions and what is happening around you.</p>
         <div class="g">
           <div class="c">
             <h3>Campus updates</h3>
-            <p>Notices, hostel alerts, and events shared directly by the students living them.</p>
+            <p>News, notices, and events shared directly by the students living them.</p>
           </div>
           <div class="c">
             <h3>Raise it, anonymously</h3>
-            <p>Flag administrative failures, curfew issues, or unfair grading safely without fear.</p>
+            <p>Flag issues with hostels, rules, or administration safely.</p>
           </div>
           <div class="c">
-            <h3>Free speech, protected</h3>
-            <p>Uncensored debate guarded by strictly enforced rules against targeted abuse.</p>
+            <h3>Free speech</h3>
+            <p>Say what you think, with clear safeguards against harassment.</p>
           </div>
           <div class="c">
-            <h3>Verified students</h3>
-            <p>One person per account, verified securely through college email or student ID.</p>
+            <h3>Real students</h3>
+            <p>One person per account, verified by college ID.[span_3](start_span)[span_3](end_span)</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Blog Section (homepage excerpt) -->
+    <!-- Latest 3 Blog Posts Section with Exact Logo Fallback -->
     <section class="pg" id="blog">
       <div class="bhd">
-        <h2>Latest from the blog</h2>
-        <a href="blog/index.html">See all posts</a>
+        <h2>Latest from the blog</h2>[span_4](start_span)[span_4](end_span)
+        <a href="blog/index.html">All posts &rarr;</a>
       </div>
       <div class="blog-grid">
         <article class="post-card">
-          <a class="post-card-content" href="blog/takes-a-new-social-media-for-gen-z.html">
-            <span class="post-card-date">October 2026</span>
-            <h3 class="post-card-title">Takes: A New Social Media for Gen Z and Free Speech</h3>
-            <p style="color:var(--mu); margin-top:8px; font-size:0.95rem;">Takes is a text-first platform for students who want genuine debate without algorithm manipulation or commercial bot farms.</p>
+          <a href="blog/takes-a-new-social-media-for-gen-z.html">
+            <img class="post-card-thumb" 
+                 src="image/takes-launch-banner.jpg" 
+                 alt="Takes Launch" 
+                 onerror="this.onerror=null;this.src='image/takes-official-logo.png';">
+            <div class="post-card-content">
+              <span class="post-card-date">October 11, 2026</span>[span_5](start_span)[span_5](end_span)[span_6](start_span)[span_6](end_span)
+              <h3 class="post-card-title">Takes: A New Social Media for Gen Z and Free Speech</h3>[span_7](start_span)[span_7](end_span)[span_8](start_span)[span_8](end_span)
+              <p class="post-card-snippet">Every account is one real person, and every post can be public or anonymous.[span_9](start_span)[span_9](end_span) Discover why text leads.</p>
+            </div>
           </a>
         </article>
+
         <article class="post-card">
-          <a class="post-card-content" href="blog/why-anonymous-takes-matter-on-campus.html">
-            <span class="post-card-date">October 2026</span>
-            <h3 class="post-card-title">Why Anonymous Discourse Matters on Indian Campuses</h3>
-            <p style="color:var(--mu); margin-top:8px; font-size:0.95rem;">Separating high-stakes ideas from public identities lets truth emerge without retaliation from administrators or peers.</p>
+          <a href="blog/why-anonymous-takes-matter-on-campus.html">
+            <img class="post-card-thumb" 
+                 src="image/anonymous-campus.jpg" 
+                 alt="Campus Ghost Mode" 
+                 onerror="this.onerror=null;this.src='image/takes-official-logo.png';">
+            <div class="post-card-content">
+              <span class="post-card-date">October 08, 2026</span>
+              <h3 class="post-card-title">Why Anonymous Discourse Matters on Indian Campuses</h3>
+              <p class="post-card-snippet">Separating student identities from sensitive campus concerns allows honest critique without academic retaliation.</p>
+            </div>
           </a>
         </article>
+
         <article class="post-card">
-          <a class="post-card-content" href="blog/how-student-verification-works.html">
-            <span class="post-card-date">October 2026</span>
-            <h3 class="post-card-title">How Student Verification Works</h3>
-            <p style="color:var(--mu); margin-top:8px; font-size:0.95rem;">A simple, privacy-first verification flow ensures one person per campus account using college email or secure ID checks.</p>
+          <a href="blog/how-student-verification-works.html">
+            <img class="post-card-thumb" 
+                 src="image/college-id-verification.jpg" 
+                 alt="College ID Verification" 
+                 onerror="this.onerror=null;this.src='image/takes-official-logo.png';">
+            <div class="post-card-content">
+              <span class="post-card-date">October 02, 2026</span>
+              <h3 class="post-card-title">How College ID & Location Verification Keeps Takes Bot-Free</h3>
+              <p class="post-card-snippet">A deep dive into our zero-retention verification pipeline protecting the verified Campus feed.</p>
+            </div>
           </a>
         </article>
       </div>
     </section>
 
-    <!-- Questions FAQ Accordion -->
     <section id="faq">
       <div class="w">
-        <h2>Questions</h2>
+        <h2>Questions</h2>[span_10](start_span)[span_10](end_span)
         <details class="q">
           <summary>What is Takes?</summary>
-          <p>Takes is a text-first microblogging platform where real students publish short takes up to 280 characters, either publicly or anonymously.</p>
+          <p>Takes is a text-first microblogging app where real people post short takes of up to 280 characters, publicly or anonymously.[span_11](start_span)[span_11](end_span)</p>
         </details>
         <details class="q">
-          <summary>Who can use Takes?</summary>
-          <p>Built primarily for students and Gen Z across India to unite campuses. Verified journalists, institutions, and student groups can also participate.</p>
+          <summary>Who is Takes for?</summary>
+          <p>Students and Gen Z in India who want to connect with their campus and each other.</p>
         </details>
         <details class="q">
-          <summary>Can anyone see who wrote a Ghost take?</summary>
-          <p>No. Public usernames and profile links are completely uncoupled from Ghost takes. Metadata is kept private to preserve discourse integrity.</p>
+          <summary>Will Takes have bots, reels or AI images?</summary>
+          <p>No reels.[span_12](start_span)[span_12](end_span) Takes is text-first.[span_13](start_span)[span_13](end_span) The platform is built around verified students to make bot farming unprofitable.</p>
+        </details>
+        <details class="q">
+          <summary>Can people see who wrote an anonymous take?</summary>[span_14](start_span)[span_14](end_span)
+          <p>No. Other users cannot see the author of an anonymous take. Identity is protected.</p>
+        </details>
+        <details class="q">
+          <summary>How do I get early access?</summary>[span_15](start_span)[span_15](end_span)
+          <p>Join the waitlist below. Early members get invites first.[span_16](start_span)[span_16](end_span)</p>
         </details>
       </div>
     </section>
 
-    <!-- Final Call to Action -->
     <section class="cta">
       <div class="w">
-        <h2>Be a first user.</h2>
-        <p class="lead" style="margin: 0 auto 24px;">Early members receive early beta invitations first.</p>
+        <h2>Be a first user.[span_17](start_span)[span_17](end_span)</h2>
+        <p class="lead" style="margin: 0 auto 24px;">Early members get invites first.[span_18](start_span)[span_18](end_span)</p>
         <form class="wl" id="footerWaitlist">
           <input aria-label="Your email" name="email" placeholder="Your email address" required type="email">
           <input aria-hidden="true" autocomplete="off" class="hp" name="website" tabindex="-1">
-          <button type="submit">Get early access</button>
+          <button type="submit">Get early access</button>[span_19](start_span)[span_19](end_span)
         </form>
         <div class="ok" id="footerSuccess">Thank you for waiting for Takes.</div>
       </div>
     </section>
   </main>
 
-  <!-- Site Footer with Bolt-style Scanline Animated Watermark -->
   <footer>
     <div class="w">
       <nav aria-label="Footer" class="fl">
         <a href="#how">How it works</a>
         <a href="#campus">Campus</a>
-        <a href="#blog">Blog</a>
-        <a href="privacy.html">Privacy Policy</a>
+        <a href="blog/index.html">Blog</a>
+        <a href="about.html">About</a>[span_20](start_span)[span_20](end_span)
+        <a href="privacy.html">Privacy Policy</a>[span_21](start_span)[span_21](end_span)
       </nav>
-      <p class="footer-copy">Takes. Made in Bhaarat 🇮🇳 &middot; &copy; 2026 Takes. All rights reserved.</p>
+      <p class="footer-copy">Takes. Made in Bhaarat 🇮🇳 &middot; &copy; 2026 Takes. Not yet launched.[span_22](start_span)[span_22](end_span)</p>
     </div>
 
-    <!-- The Giant Bolt-style Watermark -->
-    <div class="bolt-watermark-wrap" aria-hidden="true">
-      <div class="bolt-watermark-glow"></div>
-      <div class="bolt-watermark-text">Takes.</div>
+    <!-- Takes. Giant Animated Watermark -->
+    <div class="takes-watermark-wrap" aria-hidden="true">
+      <div class="takes-watermark-glow"></div>
+      <div class="takes-watermark-text">Takes.</div>
     </div>
   </footer>
 
-  <!-- Pure Vanilla JavaScript -->
   <script>
     (function () {
       const body = document.body;
@@ -265,7 +280,6 @@
       const closeBtn = document.getElementById('mx');
       const themeBtn = document.getElementById('th');
 
-      // 1. Mobile Drawer Toggle
       function setMenu(open) {
         body.classList.toggle('mo', open);
         menuBtn.setAttribute('aria-expanded', open);
@@ -274,11 +288,8 @@
       menuBtn.addEventListener('click', () => setMenu(!body.classList.contains('mo')));
       overlay.addEventListener('click', () => setMenu(false));
       closeBtn.addEventListener('click', () => setMenu(false));
-      document.querySelectorAll('.dr a').forEach(link => {
-        link.addEventListener('click', () => setMenu(false));
-      });
+      document.querySelectorAll('.dr a').forEach(link => link.addEventListener('click', () => setMenu(false)));
 
-      // 2. Light / Dark Theme Toggle
       themeBtn.addEventListener('click', () => {
         const current = root.getAttribute('data-theme') || 
           (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
@@ -287,20 +298,17 @@
         try { localStorage.setItem('tk-theme', next); } catch (e) {}
       });
 
-      // 3. Waitlist Form Submission Handling
       function setupForm(formId, successId) {
         const form = document.getElementById(formId);
         const success = document.getElementById(successId);
         if (!form) return;
-
         form.addEventListener('submit', (e) => {
           e.preventDefault();
-          if (form.website.value) return; // Honeypot spam check
+          if (form.website.value) return;
           form.style.display = 'none';
           success.style.display = 'block';
         });
       }
-
       setupForm('heroWaitlist', 'heroSuccess');
       setupForm('footerWaitlist', 'footerSuccess');
     })();
