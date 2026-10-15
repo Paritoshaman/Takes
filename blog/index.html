@@ -1,50 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#121316">
   <title>Blog — Takes.</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../style.css">
+
+  <script>
+    try {
+      var saved = localStorage.getItem('tk-theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    } catch(e) {}
+  </script>
 </head>
 <body>
+
   <header class="nv">
     <div class="w">
-      <a class="logo" href="../index.html">Takes.</a>
+      <a class="logo" href="../index.html">
+        <svg viewBox="0 0 100 100" aria-hidden="true">
+          <circle cx="50" cy="46" r="42" fill="#C0FE72"/>
+          <path d="M13 66L6 95l30-9z" fill="#C0FE72"/>
+          <rect x="24" y="28" width="52" height="20" rx="10" fill="#121316"/>
+          <rect x="41" y="40" width="18" height="42" rx="4" fill="#121316"/>
+        </svg>
+        Takes.
+      </a>
+
       <nav aria-label="Main" class="nl">
         <a href="../index.html#how">How it works</a>
         <a href="../index.html#campus">Campus</a>
-        <a href="../blog/index.html">Blog</a>
+        <a href="index.html" style="color:var(--tx); font-weight:700;">Blog</a>
         <a href="../about.html">About</a>
+        <a class="bt" href="../index.html#join">Join</a>
       </nav>
+
+      <button aria-label="Switch theme" class="ic" id="th" type="button">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3v18a9 9 0 0 0 0-18z" fill="currentColor"/></svg>
+      </button>
+
+      <button aria-controls="dr" aria-expanded="false" aria-label="Open menu" class="ic mb" id="mb" type="button">
+        <svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
     </div>
   </header>
 
-  <main class="pg w">
-    <div class="bhd">
-      <h2>Blog Archive</h2>
+  <div class="ov" id="ov"></div>
+  <aside aria-label="Menu" class="dr" id="dr">
+    <button aria-label="Close menu" class="x" id="mx" type="button">&times;</button>
+    <div class="dl">
+      <a href="../index.html">Home</a>
+      <a href="index.html">All Blog Posts</a>
+      <a href="../about.html">About</a>
+      <a href="../privacy.html">Privacy Policy</a>
     </div>
+  </aside>
+
+  <main class="pg">
+    <div class="bhd" style="margin-bottom: 24px;">
+      <div>
+        <h1 style="font-size: clamp(2rem, 5vw, 3rem); font-weight: 800;">Takes Blog</h1>
+        <p class="lead" style="margin-top: 6px;">News, campus discourse analysis, and updates directly from the team.</p>
+      </div>
+    </div>
+
     <div class="blog-grid">
       <article class="post-card">
-        <a href="takes-a-new-social-media-for-gen-z.html" class="post-card-content">
-          <span class="post-card-date">October 2026</span>
-          <h3 class="post-card-title">Takes: A New Social Media for Gen Z and Free Speech</h3>
-          <p style="color:var(--mu); margin-top:8px; font-size:0.95rem;">Takes is a text-first platform for students who want genuine debate without algorithm manipulation or commercial bot farms.</p>
+        <a href="takes-a-new-social-media-for-gen-z.html">
+          <img class="post-card-thumb" 
+               src="../image/takes-launch-banner.jpg" 
+               alt="Takes Platform Launch" 
+               onerror="this.onerror=null;this.src='../image/takes-official-logo.png';">
+          <div class="post-card-content">
+            <span class="post-card-date">October 11, 2026 &middot; 3 min read</span>
+            <h2 class="post-card-title">Takes: A New Social Media for Gen Z and Free Speech</h2>
+            <p class="post-card-snippet">Takes is a text-first social app for students seeking unfiltered conversation without endless video feeds or algorithmic bias.</p>
+          </div>
         </a>
       </article>
 
       <article class="post-card">
-        <a href="why-anonymous-takes-matter-on-campus.html" class="post-card-content">
-          <span class="post-card-date">October 2026</span>
-          <h3 class="post-card-title">Why Anonymous Discourse Matters on Indian Campuses</h3>
-          <p style="color:var(--mu); margin-top:8px; font-size:0.95rem;">Separating high-stakes ideas from public identities lets truth emerge without retaliation from administrators or peers.</p>
+        <a href="why-anonymous-takes-matter-on-campus.html">
+          <img class="post-card-thumb" 
+               src="../image/anonymous-campus.jpg" 
+               alt="Anonymous Discourse" 
+               onerror="this.onerror=null;this.src='../image/takes-official-logo.png';">
+          <div class="post-card-content">
+            <span class="post-card-date">October 08, 2026 &middot; 4 min read</span>
+            <h2 class="post-card-title">Why Anonymous Discourse Matters on Indian Campuses</h2>
+            <p class="post-card-snippet">Whistleblowing and campus safety require separation from personal identity. Learn how Ghost Mode preserves honest debate.</p>
+          </div>
         </a>
       </article>
 
       <article class="post-card">
-        <a href="how-student-verification-works.html" class="post-card-content">
-          <span class="post-card-date">October 2026</span>
-          <h3 class="post-card-title">How Student Verification Works</h3>
-          <p style="color:var(--mu); margin-top:8px; font-size:0.95rem;">A simple, privacy-first verification flow ensures one person per campus account using college email or secure ID checks.</p>
+        <a href="how-student-verification-works.html">
+          <img class="post-card-thumb" 
+               src="../image/college-id-verification.jpg" 
+               alt="Verification Pipeline" 
+               onerror="this.onerror=null;this.src='../image/takes-official-logo.png';">
+          <div class="post-card-content">
+            <span class="post-card-date">October 02, 2026 &middot; 5 min read</span>
+            <h2 class="post-card-title">How College ID & Location Verification Keeps Takes Bot-Free</h2>
+            <p class="post-card-snippet">A transparent look at the local verification process that validates students without storing unnecessary identity records.</p>
+          </div>
         </a>
       </article>
     </div>
@@ -53,11 +117,40 @@
   <footer>
     <div class="w">
       <nav aria-label="Footer" class="fl">
-        <a href="../index.html#how">How it works</a>
-        <a href="../index.html#campus">Campus</a>
+        <a href="../index.html">Home</a>
+        <a href="index.html">Blog</a>
+        <a href="../about.html">About</a>
         <a href="../privacy.html">Privacy Policy</a>
       </nav>
+      <p class="footer-copy">Takes. Made in Bhaarat 🇮🇳 &middot; &copy; 2026 Takes.</p>
+    </div>
+
+    <div class="takes-watermark-wrap" aria-hidden="true">
+      <div class="takes-watermark-glow"></div>
+      <div class="takes-watermark-text">Takes.</div>
     </div>
   </footer>
+
+  <script>
+    (function () {
+      const root = document.documentElement;
+      const themeBtn = document.getElementById('th');
+      const mb = document.getElementById('mb');
+      const dr = document.getElementById('dr');
+      const ov = document.getElementById('ov');
+      const mx = document.getElementById('mx');
+
+      function toggle(o) { document.body.classList.toggle('mo', o); }
+      mb.onclick = () => toggle(true);
+      ov.onclick = () => toggle(false);
+      mx.onclick = () => toggle(false);
+
+      themeBtn.onclick = () => {
+        const next = (root.getAttribute('data-theme') === 'light') ? 'dark' : 'light';
+        root.setAttribute('data-theme', next);
+        localStorage.setItem('tk-theme', next);
+      };
+    })();
+  </script>
 </body>
 </html>
